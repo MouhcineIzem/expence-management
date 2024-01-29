@@ -17,7 +17,16 @@ export class ProjectService {
     {
       id: 1,
       name: 'project_1',
-      users: [ {name: 'mouhcine', expense: 120 }]
+      users: [
+        {
+          name: 'Abdeloihab',
+          expense: 500
+        },
+        {
+          name: 'Mouhcine',
+          expense: 120
+        }
+        ]
     }
   ];
 
