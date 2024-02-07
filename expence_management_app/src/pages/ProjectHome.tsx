@@ -1,5 +1,8 @@
 import {useState} from "react";
 import axios from 'axios';
+import {Project, User} from "../models/model";
+
+
 
 function ProjectHome() {
     const [projectName, setProjectName] = useState('');
@@ -9,8 +12,16 @@ function ProjectHome() {
 
     const createProject = async () => {
         try {
-            console.log(projectName);
-            console.log(participants);
+            let project: Project;
+            let users: User[];
+
+            project.name = projectName;
+            users = participants;
+            project.users = users;
+
+            console.log(project);
+
+
             const response = await axios.post('https://localhost:3000/expense/create-project', {
                 projectName,
                 participants,
